@@ -99,12 +99,12 @@ Each `.v[........].txt` file contains the **Verilog code**  for respective modul
 
 ## 🧪 Testbench Summary
 
-- **Input Sequence:** `X[n]=5`, `X[n-1]=2`, `X[n-2]=1`
+- **Input Sequence:** `X[n]=1`, `X[n-1]=2`, `X[n-2]=5`
 - **Coefficients:** `A=4`, `B=8`, `C=16`
 - **Computation:**
-`-->A·X[n] = 5 << 2 = 20`
+`-->A·X[n] = 1 << 2 = 4`
 `-->B·X[n-1] = 2 << 3 = 16`
-`-->C·X[n-2] = 1 << 4 = 16`
+`-->C·X[n-2] = 5 << 4 = 64`
 `-->Y[n] = 20 + 16 + 64 = 100`
 - **Expected Output:**
 `Y[n] = 100`
