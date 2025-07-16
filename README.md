@@ -23,7 +23,7 @@ Where `A`, `B`, and `C` are power-of-two constants. The implementation avoids us
 
 ## 📁 File Descriptions
 
-Each `.v[........].docx` file contains the **Verilog source code** and explanation for its respective module in the DSP-based custom ALU design.
+Each `.v[........].docx` file contains the **Verilog code**  for respective module in the DSP-based custom ALU design.
 
 - **Top.v[Main_Block].docx**  
   Describes the top-level module integrating all DSP blocks to implement the equation:  
@@ -63,7 +63,7 @@ Each `.v[........].docx` file contains the **Verilog source code** and explanati
   Provides the testbench structure with input stimulus and expected output checks for validating the entire design.
 
 - **FULL WORKING.docx**  
-  A consolidated document compiling all Verilog modules and their interconnections for a complete RTL design.
+  A consolidated document compiling working of all Verilog modules  and their interconnections for a complete RTL design.
 
 - **README.md**  
   Project overview, explanation of architecture, usage, simulation details, and contribution guidelines.
