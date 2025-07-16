@@ -23,46 +23,46 @@ Where `A`, `B`, and `C` are power-of-two constants. The implementation avoids us
 
 ## 📁 File Descriptions
 
-Each `.v[........].docx` file contains the **Verilog code**  for respective module in the DSP-based custom ALU design.
+Each `.v[........].txt` file contains the **Verilog code**  for respective module in the DSP-based custom ALU design.
 
-- **Top.v[Main_Block].docx**  
+- **Top.v[Main_Block].txt**  
   Describes the top-level module integrating all DSP blocks to implement the equation:  
   `Y[n] = A·X[n] + B·X[n−1] + C·X[n−2]`.
 
-- **variables.v[Sub_Block].docx**  
+- **variables.v[Sub_Block].txt**  
   Details the register block implementing a 3-tap delay line to store input values X[n], X[n−1], and X[n−2].
 
-- **shifting.v[Sub_Block].docx**  
+- **shifting.v[Sub_Block].txt**  
   Contains the logic for detecting shift values based on coefficients A, B, and C using log₂ encoding.
 
-- **multi.v[Sub_Block].docx**  
+- **multi.v[Sub_Block].txt**  
   Implements shift-based multiplication control logic, replacing power-hungry multipliers with efficient barrel shifters.
 
-- **barrelshifter.v[Sub_Block].docx**  
+- **barrelshifter.v[Sub_Block].txt**  
   Defines the barrel shifter used to perform fast left-shift operations for multiplication by powers of two.
 
-- **setting.v[Sub_Block].docx**  
+- **setting.v[Sub_Block].txt**  
   Describes the arithmetic operation selector that routes inputs to the appropriate adder module.
 
-- **repple_carry_adder.v[Sub_Block].docx**  
+- **repple_carry_adder.v[Sub_Block].txt**  
   Details the 8-bit ripple carry adder module for basic addition operations.
 
-- **carry_look_ahead.v[Sub_Block].docx**  
+- **carry_look_ahead.v[Sub_Block].txt**  
   Explains the 8-bit carry look-ahead adder for faster addition with reduced propagation delay.
 
-- **regi.v[Sub_Block].docx**  
+- **regi.v[Sub_Block].txt**  
   Manages output selection and final register storage of computed Y[n].
 
-- **alu.v[Sub_Block].docx**  
+- **alu.v[Sub_Block].txt**  
   Defines the control unit that coordinates arithmetic operations across the DSP datapath.
 
-- **cond.v[Sub_Block].docx**  
+- **cond.v[Sub_Block].txt**  
   Generates status flags such as overflow and zero, useful for further control or branching.
 
-- **tb_top.v[Testbench Block].docx**  
+- **tb_top.v[Testbench Block].txt**  
   Provides the testbench structure with input stimulus and expected output checks for validating the entire design.
 
-- **FULL WORKING.docx**  
+- **FULL WORKING**  
   A consolidated document compiling working of all Verilog modules  and their interconnections for a complete RTL design.
 
 - **README.md**  
