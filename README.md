@@ -62,7 +62,16 @@ Each `.v[........].txt` file contains the **Verilog code**  for respective modul
 - **tb_top.v[Testbench Block].txt**  
   Provides the testbench structure with input stimulus and expected output checks for validating the entire design.
 
-- **FULL WORKING**  
+- **Expected_result's(for verification and validation).docx**  
+  Contains detailed expected results, signal timing, and verification checklist to validate the functional behavior of the custom ALU DSP filter design.
+
+- **rtl_implementation_Result.png**  
+   Screenshot of synthesized RTL schematic from the tool showing successful hardware realization of the top-level design with all connected submodules.
+
+- **Simulation_Result.png**  
+  Captures waveform simulation output (e.g., ModelSim or Vivado) confirming correct timing, signal transitions, and final output Y[n] as per expected logic flow.
+  
+- **FULL WORKING.docx**  
   A consolidated document compiling working of all Verilog modules  and their interconnections for a complete RTL design.
 
 - **README.md**  
