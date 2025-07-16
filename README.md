@@ -21,22 +21,52 @@ Where `A`, `B`, and `C` are power-of-two constants. The implementation avoids us
 
 ---
 
-## 📂 File Structure
+## 📁 File Descriptions
 
-├── Top.v[Main_Block].docx # Top-level DSP pipeline
-├── variables.v[Main_Block].docx # 3-tap delay input register
-├── shifting.v[Main_Block].docx # Coefficient log2 detector
-├── multi.v[Main_Block].docx # Shift-based multiplier controller
-├── barrelshifter.v[Main_Block].docx # Performs left shift operations
-├── setting.v[Main_Block].docx # Arithmetic operation selector
-├── repple_carry_adder.v[Main_Block].docx # 8-bit ripple carry adder
-├── carry_look_ahead.v[Main_Block].docx # 8-bit carry look-ahead adder
-├── regi.v[Main_Block].docx # Output selector and register
-├── alu.v[Main_Block].docx # ALU control unit
-├── cond.v[Main_Block].docx # Overflow and zero flag generator
-├── tb_top.v[Main_Block].docx # Testbench with input sequence
-├── FULL WORKING.docx # Complete design document
-└── README.md # Project overview
+Each `.v[Main_Block].docx` file contains the **Verilog source code** and explanation for its respective module in the DSP-based custom ALU design.
+
+- **Top.v[Main_Block].docx**  
+  Describes the top-level module integrating all DSP blocks to implement the equation:  
+  `Y[n] = A·X[n] + B·X[n−1] + C·X[n−2]`.
+
+- **variables.v[Main_Block].docx**  
+  Details the register block implementing a 3-tap delay line to store input values X[n], X[n−1], and X[n−2].
+
+- **shifting.v[Main_Block].docx**  
+  Contains the logic for detecting shift values based on coefficients A, B, and C using log₂ encoding.
+
+- **multi.v[Main_Block].docx**  
+  Implements shift-based multiplication control logic, replacing power-hungry multipliers with efficient barrel shifters.
+
+- **barrelshifter.v[Main_Block].docx**  
+  Defines the barrel shifter used to perform fast left-shift operations for multiplication by powers of two.
+
+- **setting.v[Main_Block].docx**  
+  Describes the arithmetic operation selector that routes inputs to the appropriate adder module.
+
+- **repple_carry_adder.v[Main_Block].docx**  
+  Details the 8-bit ripple carry adder module for basic addition operations.
+
+- **carry_look_ahead.v[Main_Block].docx**  
+  Explains the 8-bit carry look-ahead adder for faster addition with reduced propagation delay.
+
+- **regi.v[Main_Block].docx**  
+  Manages output selection and final register storage of computed Y[n].
+
+- **alu.v[Main_Block].docx**  
+  Defines the control unit that coordinates arithmetic operations across the DSP datapath.
+
+- **cond.v[Main_Block].docx**  
+  Generates status flags such as overflow and zero, useful for further control or branching.
+
+- **tb_top.v[Main_Block].docx**  
+  Provides the testbench structure with input stimulus and expected output checks for validating the entire design.
+
+- **FULL WORKING.docx**  
+  A consolidated document compiling all Verilog modules and their interconnections for a complete RTL design.
+
+- **README.md**  
+  Project overview, explanation of architecture, usage, simulation details, and contribution guidelines.
 
 ---
 
