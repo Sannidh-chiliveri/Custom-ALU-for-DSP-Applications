@@ -68,7 +68,7 @@ Where `A`, `B`, and `C` are power-of-two constants. The implementation avoids us
 `-->C·X[n-2] = 1 << 4 = 16`
 `-->Y[n] = 20 + 16 + 64 = 100`
 - **Expected Output:**
-- `Y[n] = 100`
-- `en_ov = 0`, `en_zero = 0`
+`Y[n] = 100`
+`en_ov = 0`, `en_zero = 0`
 
 ---
