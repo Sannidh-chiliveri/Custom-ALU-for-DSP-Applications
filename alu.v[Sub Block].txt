@@ -1,0 +1,20 @@
+module alu(clk,rst,sel,en_rca,en_cla,en_csa,en_sh);
+input clk,rst;
+input [2:0]sel;
+output reg en_rca,en_cla,en_csa,en_sh;
+always@(posedge clk)
+begin
+if(rst)
+begin 
+en_rca<=1'b0;en_cla<=1'b0;en_csa<=1'b0;en_sh<=1'b0;
+end
+else
+begin
+ case(sel)
+ 3'b000:begin en_rca<=1'b1;en_cla<=1'b0;en_csa<=1'b0;en_sh<=1'b0; end
+ 3'b001:begin en_rca<=1'b0;en_cla=1'b1;en_csa<=1'b0;en_sh<=1'b0; end
+ 3'b011:begin en_rca<=1'b0;en_cla=1'b0;en_csa<=1'b0;en_sh<=1'b1; end
+ endcase
+end
+end
+endmodule

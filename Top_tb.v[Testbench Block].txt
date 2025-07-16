@@ -1,0 +1,38 @@
+module top_tb();
+reg clk,rst;
+reg [7:0]a,b,c,in;
+wire [7:0]
+out;
+wire en_ov,en_zero;
+top dut(clk,rst,a,b,c,in,out,en_ov,en_zero);
+
+initial
+begin
+clk=1'b0; 
+forever 
+#5 clk =~clk;//10ns ->1000MHz
+end
+
+initial 
+begin
+
+rst=1'b1;
+a=8'd4;
+b=8'd8;
+c=8'd16;
+#10
+
+rst=1'b0;
+in=8'd5;
+#10
+
+in=8'd2;
+#10
+
+in=8'd1;
+#10
+
+#100
+$finish;
+end
+endmodule
